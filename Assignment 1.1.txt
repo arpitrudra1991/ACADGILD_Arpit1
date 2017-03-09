@@ -2,26 +2,27 @@ package firstjavaar;
 import java.util.Scanner;
 public class Firstjava {
 	
-	static int add(int x, int y)
+	static int add(int a, int b)
     {
         int carry;
-        while(y!=0)
+        while(b!=0)
         {
-            carry = x & y;
-            x = x ^ y;
-            y = carry << 1;
+            carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
         }
-        return x;
+        return a;
     }
     public static void main(String args[])
     {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the numbers to be added:");
-        int x = input.nextInt();
-        int y = input.nextInt();
-        System.out.println("The Summation is: "+add(x, y));
+        System.out.println("Enter the 1st number:");
+        int a = input.nextInt();
+        System.out.println("Enter the 2nd number:"); 
+        int b = input.nextInt();
+        System.out.println("The Summation is: "+add(a, b));
         input.close();
     }
 	
 	
-	}
+	}	
